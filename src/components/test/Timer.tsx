@@ -106,6 +106,12 @@ export const TimerComponent = () => {
     }
   };
 
+  const onHandleReverse = () => {
+    if (timer) {
+      timer.reverse();
+    }
+  }
+
   const onHandleFrameRateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (timer) {
       const newFrameRate = Number(e.target.value);
@@ -180,6 +186,12 @@ export const TimerComponent = () => {
           onClick={onHandleReset}
         >
           Reset
+        </button>
+        <button
+          className="bg-emerald-500 text-white px-4 py-2 rounded disabled:opacity-50"
+          onClick={onHandleReverse}
+        >
+          Reverse
         </button>
       </div>
 
