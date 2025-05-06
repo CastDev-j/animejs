@@ -1,0 +1,14 @@
+---
+import { MdAnimation } from "react-icons/md";
+import { SITE_TITLE } from "@/consts";
+import { MenuButton } from "@/components/shared/MenuButton";
+---
+
+<header class="flex w-full text-neutral-800 p-4">
+  <h1 class="flex justify-center items-center gap-2 font-bold text-xl">
+    <MdAnimation className="text-2xl" />
+    <span>{SITE_TITLE}</span>
+  </h1>
+</header>
+
+<MenuButton client:load/>

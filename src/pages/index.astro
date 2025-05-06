@@ -1,49 +1,174 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Timer } from "@/components/test/Timer";
+import Layout from "@/layouts/Layout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Layout>
+  <main class="container min-h-screen mx-auto p-4 flex flex-col">
+    <section id="start">
+      <h1 class="text-2xl font-bold mb-2">🎨 Mi ruta de aprendizaje</h1>
+      <p class="mb-4">
+        Bienvenido a mi sitio donde estoy documentando mi aprendizaje con la
+        librería <a
+          href="https://animejs.com/"
+          class="text-blue-600 hover:underline">Anime.js</a
+        > con React. Anime.js es una poderosa herramienta para crear animaciones en
+        JavaScript.
+      </p>
+      <p class="mb-8">
+        Explora las diferentes secciones para ver ejemplos prácticos de lo que
+        se puede lograr con esta biblioteca.
+      </p>
+    </section>
+
+    <section id="timer" class="py-8 border-b border-gray-200 last:border-0">
+      <h1 class="text-2xl font-bold mb-2">Timer</h1>
+      <p class="text-gray-600 mb-4">
+        Controla y manipula temporizadores para crear animaciones sincronizadas.
+        Anime.js permite ajustar la velocidad, pausar, reiniciar y manipular el
+        tiempo de las animaciones con precisión.
+      </p>
+      <div class="bg-neutral-50 p-4 rounded-lg">
+        <Timer client:load />
+      </div>
+    </section>
+
+    <section id="animation" class="py-8 border-b border-gray-200 last:border-0">
+      <h1 class="text-2xl font-bold mb-2">Animation</h1>
+      <p class="text-gray-600 mb-4">
+        Domina los fundamentos de la animación con Anime.js: propiedades CSS,
+        transformaciones, opacidad y más. Aprende a crear transiciones suaves y
+        efectos visuales atractivos para tus elementos.
+      </p>
+      <div class="bg-neutral-50 p-4 rounded-lg">
+        {/* Aquí iría tu componente de Animation */}
+      </div>
+    </section>
+
+    <section id="timeline" class="py-8 border-b border-gray-200 last:border-0">
+      <h1 class="text-2xl font-bold mb-2">Timeline</h1>
+      <p class="text-gray-600 mb-4">
+        Crea secuencias complejas de animaciones con la línea de tiempo.
+        Coordina múltiples animaciones en secuencia o en paralelo, con control
+        total sobre los retrasos y la sincronización.
+      </p>
+      <div class="bg-neutral-50 p-4 rounded-lg">
+        {/* Aquí iría tu componente de Timeline */}
+      </div>
+    </section>
+
+    <section
+      id="animatable"
+      class="py-8 border-b border-gray-200 last:border-0"
+    >
+      <h1 class="text-2xl font-bold mb-2">Animatable</h1>
+      <p class="text-gray-600 mb-4">
+        Descubre qué propiedades CSS y atributos SVG pueden ser animados con
+        Anime.js. Explora las posibilidades de transformación, color, tamaño y
+        posición de los elementos.
+      </p>
+      <div class="bg-neutral-50 p-4 rounded-lg">
+        {/* Aquí iría tu componente de Animatable */}
+      </div>
+    </section>
+
+    <section id="draggable" class="py-8 border-b border-gray-200 last:border-0">
+      <h1 class="text-2xl font-bold mb-2">Draggable</h1>
+      <p class="text-gray-600 mb-4">
+        Implementa interacciones de arrastrar y soltar combinadas con
+        animaciones. Crea elementos interactivos que respondan al input del
+        usuario con movimientos fluidos y realistas.
+      </p>
+      <div class="bg-neutral-50 p-4 rounded-lg">
+        {/* Aquí iría tu componente de Draggable */}
+      </div>
+    </section>
+
+    <section
+      id="scrollObserver"
+      class="py-8 border-b border-gray-200 last:border-0"
+    >
+      <h1 class="text-2xl font-bold mb-2">ScrollObserver</h1>
+      <p class="text-gray-600 mb-4">
+        Desencadena animaciones basadas en el scroll de la página. Crea efectos
+        de aparición, parallax y otras animaciones que respondan a la posición
+        de desplazamiento del usuario.
+      </p>
+      <div class="bg-neutral-50 p-4 rounded-lg">
+        {/* Aquí iría tu componente de ScrollObserver */}
+      </div>
+    </section>
+
+    <section id="scope" class="py-8 border-b border-gray-200 last:border-0">
+      <h1 class="text-2xl font-bold mb-2">Scope</h1>
+      <p class="text-gray-600 mb-4">
+        Controla el alcance y contexto de tus animaciones. Aprende a seleccionar
+        y manipular grupos de elementos, y cómo aplicar animaciones específicas
+        a diferentes contextos del DOM.
+      </p>
+      <div class="bg-neutral-50 p-4 rounded-lg">
+        {/* Aquí iría tu componente de Scope */}
+      </div>
+    </section>
+
+    <section id="stagger" class="py-8 border-b border-gray-200 last:border-0">
+      <h1 class="text-2xl font-bold mb-2">Stagger</h1>
+      <p class="text-gray-600 mb-4">
+        Crea efectos de animación escalonada para múltiples elementos. Perfecto
+        para listas, grids y otros conjuntos de elementos donde quieras un
+        efecto de onda o secuencia visualmente atractiva.
+      </p>
+      <div class="bg-neutral-50 p-4 rounded-lg">
+        {/* Aquí iría tu componente de Stagger */}
+      </div>
+    </section>
+
+    <section id="svg" class="py-8 border-b border-gray-200 last:border-0">
+      <h1 class="text-2xl font-bold mb-2">SVG</h1>
+      <p class="text-gray-600 mb-4">
+        Anima gráficos vectoriales escalables (SVG) con precisión. Manipula
+        trazados, formas, gradientes y más para crear ilustraciones animadas y
+        gráficos interactivos de alta calidad.
+      </p>
+      <div class="bg-neutral-50 p-4 rounded-lg">
+        {/* Aquí iría tu componente de SVG */}
+      </div>
+    </section>
+
+    <section id="utilities" class="py-8 border-b border-gray-200 last:border-0">
+      <h1 class="text-2xl font-bold mb-2">Utilities</h1>
+      <p class="text-gray-600 mb-4">
+        Explora las funciones utilitarias de Anime.js que simplifican el trabajo
+        con animaciones. Desde easings personalizados hasta helpers para valores
+        aleatorios y manipulación de colores.
+      </p>
+      <div class="bg-neutral-50 p-4 rounded-lg">
+        {/* Aquí iría tu componente de Utilities */}
+      </div>
+    </section>
+
+    <section id="waapi" class="py-8 border-b border-gray-200 last:border-0">
+      <h1 class="text-2xl font-bold mb-2">WAAPI</h1>
+      <p class="text-gray-600 mb-4">
+        Integra Anime.js con la Web Animations API para un rendimiento óptimo.
+        Aprovecha lo mejor de ambos mundos combinando la simplicidad de Anime.js
+        con el poder nativo del navegador.
+      </p>
+      <div class="bg-neutral-50 p-4 rounded-lg">
+        {/* Aquí iría tu componente de WAAPI */}
+      </div>
+    </section>
+
+    <section id="engine" class="py-8 border-b border-gray-200 last:border-0">
+      <h1 class="text-2xl font-bold mb-2">Engine</h1>
+      <p class="text-gray-600 mb-4">
+        Profundiza en el motor de renderizado de Anime.js. Entiende cómo
+        funciona internamente la librería y cómo optimizar tus animaciones para
+        un rendimiento fluido incluso en dispositivos móviles.
+      </p>
+      <div class="bg-neutral-50 p-4 rounded-lg">
+        {/* Aquí iría tu componente de Engine */}
+      </div>
+    </section>
+  </main>
+</Layout>
