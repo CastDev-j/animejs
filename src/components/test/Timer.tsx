@@ -43,7 +43,7 @@ export const Timer = () => {
       ref={root}
       className="w-full flex flex-col justify-center items-center"
     >
-      <div className="logo flex justify-between w-full max-w-56 items-center gap-6">
+      <div className="logo flex justify-between w-full max-w-56 items-center gap-2">
         <div className="text-lg font-semibold text-gray-700">
           loops: {loops}
         </div>
