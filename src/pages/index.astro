@@ -1,5 +1,5 @@
 ---
-import { Timer } from "@/components/test/Timer";
+import { TimerComponent } from "@/components/test/Timer";
 import Layout from "@/layouts/Layout.astro";
 ---
 
@@ -29,7 +29,7 @@ import Layout from "@/layouts/Layout.astro";
         tiempo de las animaciones con precisión.
       </p>
       <div class="bg-neutral-50 p-4 rounded-lg">
-        <Timer client:load />
+        <TimerComponent client:load />
       </div>
     </section>
 
